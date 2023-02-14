@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1465,6 +1465,7 @@ TextureImporter:
       islands_1_11: 1194435088
       islands_1_9: -1169179125
       islands_1_39: -2037699480
+      islands_1_50: 2114444446
       islands_1_18: -287195972
       islands_1_16: -862363021
       islands_1_12: 737854421
@@ -1480,7 +1481,6 @@ TextureImporter:
       islands_1_60: 1883344754
       islands_1_57: -74976936
       islands_1_51: 1491642974
-      islands_1_50: 2114444446
       islands_1_0: -666119227
       islands_1_30: -1279381552
       islands_1_37: 924011162

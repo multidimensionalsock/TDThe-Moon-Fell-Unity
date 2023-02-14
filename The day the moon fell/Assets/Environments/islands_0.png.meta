@@ -44,10 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1451,7 +1451,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       islands_0_21: 993690788
-      islands_0_18: -2033530822
+      islands_0_38: -1594793334
       islands_0_25: -101835679
       islands_0_42: 471767605
       islands_0_6: -2035628295
@@ -1474,24 +1474,24 @@ TextureImporter:
       islands_0_0: -1236415545
       islands_0_36: -1829147672
       islands_0_4: 39580330
-      islands_0_39: 1353280390
-      islands_0_32: 2012056926
-      islands_0_16: -195978858
       islands_0_12: -715141299
+      islands_0_56: 1475475688
+      islands_0_16: -195978858
+      islands_0_39: 1353280390
       islands_0_22: 77785455
       islands_0_19: 48343999
       islands_0_28: 1046479413
       islands_0_30: 1841929718
-      islands_0_56: 1475475688
       islands_0_13: -1616274860
       islands_0_35: -393244219
       islands_0_14: -1609405034
       islands_0_54: -1514032356
+      islands_0_32: 2012056926
       islands_0_59: 1870891159
       islands_0_11: -1127721908
+      islands_0_37: -131906407
       islands_0_24: -1231096913
       islands_0_33: -741865577
-      islands_0_37: -131906407
       islands_0_5: 1210812257
       islands_0_52: -186673535
       islands_0_34: 2012471614
@@ -1512,7 +1512,7 @@ TextureImporter:
       islands_0_62: 1300728975
       islands_0_2: -69718150
       islands_0_41: -225042434
-      islands_0_38: -1594793334
+      islands_0_18: -2033530822
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
