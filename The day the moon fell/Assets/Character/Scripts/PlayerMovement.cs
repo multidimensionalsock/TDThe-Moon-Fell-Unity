@@ -16,12 +16,15 @@ public class PlayerMovement : MonoBehaviour
 
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
+	[SerializeField] float m_maxVelocity;
+	[SerializeField] float m_jumpForce;
+
 	void Awake()
 	{
 		m_Input = GetComponent<PlayerInput>();
 		m_Rigidbody = GetComponent<Rigidbody2D>();
 		m_Input.currentActionMap.FindAction("Movement").performed += MoveStart;
-		//m_Input.currentActionMap.FindAction("Jump").performed += Jump;
+		m_Input.currentActionMap.FindAction("Jump").performed += Jump;
 		m_Input.currentActionMap.FindAction("Movement").canceled += MoveEnd;
 	}
 
@@ -43,12 +46,24 @@ public class PlayerMovement : MonoBehaviour
 	#region movement 
 	IEnumerator Move()
 	{
-		while (m_Movement != Vector2.zero)
+		Debug.Log("moving");
+		while (m_Movement.x != 0)
 		{
-			m_Rigidbody.AddForce(m_Movement * m_movementSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+			m_Rigidbody.AddForce(new Vector2(m_Movement.x * m_movementSpeed * Time.fixedDeltaTime, 0), ForceMode2D.Impulse);
 
+			if (m_Rigidbody.velocity.x > m_maxVelocity)
+            {
+				m_Rigidbody.velocity = new Vector2(m_maxVelocity, m_Rigidbody.velocity.y);
+			}
 			yield return new WaitForFixedUpdate();
 		}
+	}
+
+	void Jump(InputAction.CallbackContext context)
+    {
+		Debug.Log("jumping");
+		//need to check gounded
+		m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
 	}
 
 	#endregion
