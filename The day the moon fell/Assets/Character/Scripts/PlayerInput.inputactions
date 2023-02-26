@@ -125,7 +125,7 @@
                 {
                     "name": "",
                     "id": "d497c5f3-33cb-4fd4-8927-3717e4d21ae4",
-                    "path": "<Keyboard>/anyKey",
+                    "path": "<Keyboard>/#(1)",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
