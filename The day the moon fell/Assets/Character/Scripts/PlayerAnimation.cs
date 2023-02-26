@@ -12,13 +12,14 @@ public class PlayerAnimation : MonoBehaviour
 {
 	private PlayerInput m_Input;
 	private Vector2 m_direction; //true == right, false == left
+	private Animator m_Animator;
 
 	// Start is called before the first frame update
 	void Awake()
     {
 		m_Input = GetComponent<PlayerInput>();
+		m_Animator= GetComponent<Animator>();
 		m_Input.currentActionMap.FindAction("Movement").performed += MoveStart;
-		//m_Input.currentActionMap.FindAction("Jump").performed += Jump;
 		m_Input.currentActionMap.FindAction("Movement").canceled += MoveEnd;
 	}
 
@@ -29,13 +30,15 @@ public class PlayerAnimation : MonoBehaviour
 		{
 			Flip();
 			m_direction = context.ReadValue<Vector2>();
+			m_Animator.SetTrigger("Walk");
 		}
 	}
 
 	void MoveEnd(InputAction.CallbackContext context)
 	{
-		//set walk to false, set idle 
+		m_Animator.SetTrigger("Idle");
 	}
+
 
 	// Update is called once per frame
 	void Flip()
@@ -44,11 +47,13 @@ public class PlayerAnimation : MonoBehaviour
 
 		if (m_direction.x > 0)
 		{
-			theScale.x = 1f;
-		}
-		if (m_direction.x < 0)
-		{
 			theScale.x = -1f;
 		}
+		if (m_direction.x <= 0)
+		{
+			theScale.x = 1f;
+		}
+
+		transform.localScale = theScale;
 	}
 }
