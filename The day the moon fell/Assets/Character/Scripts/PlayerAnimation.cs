@@ -30,13 +30,15 @@ public class PlayerAnimation : MonoBehaviour
 		{
 			Flip();
 			m_direction = context.ReadValue<Vector2>();
-			m_Animator.SetTrigger("Walk");
+			m_Animator.SetBool("Walk", true);
+			m_Animator.SetBool("Idle", false);
 		}
 	}
 
 	void MoveEnd(InputAction.CallbackContext context)
 	{
-		m_Animator.SetTrigger("Idle");
+		m_Animator.SetBool("Idle", true);
+		m_Animator.SetBool("Walk", false);
 	}
 
 
