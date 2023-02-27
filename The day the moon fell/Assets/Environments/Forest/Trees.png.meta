@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -20586,8 +20586,8 @@ TextureImporter:
       Trees_147: 858400422
       Trees_358: 1741493982
       Trees_0: -306174214
-      Trees_106: -1344308169
       Trees_600: 542401947
+      Trees_106: -1344308169
       Trees_744: -1168652983
       Trees_895: -1782352140
       Trees_472: -1203209545
@@ -20617,12 +20617,12 @@ TextureImporter:
       Trees_476: -908830983
       Trees_344: -1668253938
       Trees_76: 727971136
-      Trees_176: 507479909
-      Trees_357: 1050604124
-      Trees_230: -1258392292
       Trees_703: -104807329
+      Trees_176: 507479909
+      Trees_230: -1258392292
       Trees_219: -1598644813
       Trees_874: 2071326956
+      Trees_357: 1050604124
       Trees_518: -71389104
       Trees_891: 1951965209
       Trees_5: -2045928514
@@ -20687,8 +20687,8 @@ TextureImporter:
       Trees_95: 1069392725
       Trees_708: -447942628
       Trees_617: 856885179
-      Trees_642: -1530158130
       Trees_930: -1919629433
+      Trees_642: -1530158130
       Trees_113: 543407489
       Trees_340: 1569691752
       Trees_678: -1630527320
@@ -20705,9 +20705,9 @@ TextureImporter:
       Trees_913: -1022150653
       Trees_156: -2058396754
       Trees_270: -1606071731
+      Trees_550: -1671151567
       Trees_242: 1526535494
       Trees_934: -333045975
-      Trees_550: -1671151567
       Trees_283: -1453402763
       Trees_312: -247798434
       Trees_724: 1886710460
@@ -20780,6 +20780,7 @@ TextureImporter:
       Trees_538: 1744255011
       Trees_787: -381203378
       Trees_82: -742522019
+      Trees_838: -1130381673
       Trees_341: 1790778399
       Trees_20: 911492345
       Trees_533: 1647799926
@@ -20806,7 +20807,6 @@ TextureImporter:
       Trees_459: 445926657
       Trees_4: 1011340627
       Trees_947: -734570576
-      Trees_838: -1130381673
       Trees_248: -1893424817
       Trees_96: -537544702
       Trees_260: 2012414978
@@ -20814,17 +20814,17 @@ TextureImporter:
       Trees_412: 2045794456
       Trees_816: 1259297244
       Trees_350: -1103594317
-      Trees_712: 1216528860
       Trees_770: -907840684
       Trees_856: -1457015010
+      Trees_712: 1216528860
       Trees_116: -1554928275
       Trees_676: 68322789
       Trees_240: -941070979
-      Trees_384: 556842942
       Trees_413: 161525901
-      Trees_670: 376426301
-      Trees_408: 552587107
       Trees_961: 896673166
+      Trees_384: 556842942
+      Trees_408: 552587107
+      Trees_670: 376426301
       Trees_660: -1363625409
       Trees_26: -1714351884
       Trees_742: -1552077246
@@ -20859,10 +20859,10 @@ TextureImporter:
       Trees_271: 970538133
       Trees_182: -664545154
       Trees_294: 1356108345
-      Trees_272: 1631983030
+      Trees_968: -751588294
       Trees_885: -1604352196
       Trees_539: 649630096
-      Trees_968: -751588294
+      Trees_272: 1631983030
       Trees_664: 1584991622
       Trees_734: -1557334299
       Trees_752: -305602427
@@ -20886,13 +20886,13 @@ TextureImporter:
       Trees_902: -27282842
       Trees_449: -1052258388
       Trees_31: -1978739421
-      Trees_658: 1683954892
       Trees_890: 2049634441
       Trees_745: -221515893
       Trees_714: -821142730
       Trees_51: 973989987
       Trees_796: 716378728
       Trees_529: -1566587490
+      Trees_658: 1683954892
       Trees_120: -1865028518
       Trees_474: 398728722
       Trees_331: -2097258237
@@ -21115,9 +21115,9 @@ TextureImporter:
       Trees_949: -2047161604
       Trees_517: -1267132542
       Trees_86: -557149780
-      Trees_224: -107511447
       Trees_244: -1894621338
       Trees_748: -180541987
+      Trees_224: -107511447
       Trees_809: 1149008081
       Trees_959: 462373670
       Trees_671: -1058321349
@@ -21146,11 +21146,11 @@ TextureImporter:
       Trees_324: -114001722
       Trees_635: 210806612
       Trees_169: -992669644
-      Trees_316: -584558175
+      Trees_706: -50214396
       Trees_377: -2144379687
+      Trees_316: -584558175
       Trees_30: 2069330067
       Trees_286: 170504518
-      Trees_706: -50214396
       Trees_508: -795828518
       Trees_427: 1910199437
       Trees_161: 2109679489
@@ -21172,17 +21172,17 @@ TextureImporter:
       Trees_489: -1749202406
       Trees_832: 8890145
       Trees_227: 839854352
-      Trees_627: 481416937
       Trees_729: 2113238358
+      Trees_627: 481416937
       Trees_41: -407461400
       Trees_797: 1883627176
       Trees_543: -1952404962
       Trees_464: 795897378
       Trees_651: 320202066
       Trees_13: 1399473765
+      Trees_955: 887354300
       Trees_130: -879731437
       Trees_565: -1153441350
-      Trees_955: 887354300
       Trees_48: -668623034
       Trees_759: 1771220503
       Trees_381: 1258355371
