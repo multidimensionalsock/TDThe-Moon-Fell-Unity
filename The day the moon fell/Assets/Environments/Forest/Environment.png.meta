@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 63
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -14194,11 +14194,11 @@ TextureImporter:
       Environment_491: -402182543
       Environment_77: -2045442111
       Environment_578: -83299080
-      Environment_483: 266474396
+      Environment_454: -1302867944
       Environment_215: 487238535
       Environment_10: 141653087
+      Environment_483: 266474396
       Environment_625: 1218882882
-      Environment_454: -1302867944
       Environment_76: 1473570014
       Environment_580: 1971377385
       Environment_96: 1381260966

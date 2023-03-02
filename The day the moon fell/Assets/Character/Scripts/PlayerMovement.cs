@@ -38,31 +38,48 @@ public class PlayerMovement : MonoBehaviour
 	void MoveEnd(InputAction.CallbackContext context)
 	{
 		m_Movement = Vector2.zero;
+		if (m_Rigidbody.velocity.y == 0)
+			m_Rigidbody.velocity = new Vector2(0, m_Rigidbody.velocity.y);
+		else
+		{
+			StartCoroutine(CheckIfGrounded());
+		}
 		StopCoroutine(m_moveCoroutine);
 	}
+
 
 	#endregion
 
 	#region movement 
+	IEnumerator CheckIfGrounded()
+	{
+		while (m_Rigidbody.velocity.y != 0)
+		{
+			yield return new WaitForFixedUpdate();
+		}
+		m_Rigidbody.velocity = Vector2.zero;
+	}
 	IEnumerator Move()
 	{
 		Debug.Log("moving");
 		while (m_Movement.x != 0)
 		{
-			m_Rigidbody.AddForce(new Vector2(m_Movement.x * m_movementSpeed * Time.fixedDeltaTime, 0), ForceMode2D.Impulse);
+			m_Rigidbody.AddForce(m_Movement * m_movementSpeed, ForceMode2D.Impulse);
 
 			if (m_Rigidbody.velocity.x > m_maxVelocity)
-            {
+			{
 				m_Rigidbody.velocity = new Vector2(m_maxVelocity, m_Rigidbody.velocity.y);
+			}
+			else if (m_Rigidbody.velocity.x < -m_maxVelocity)
+			{
+				m_Rigidbody.velocity = new Vector2(-m_maxVelocity, m_Rigidbody.velocity.y);
 			}
 			yield return new WaitForFixedUpdate();
 		}
 	}
 
 	void Jump(InputAction.CallbackContext context)
-    {
-		Debug.Log("jumping");
-		//need to check gounded
+	{
 		m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
 	}
 
