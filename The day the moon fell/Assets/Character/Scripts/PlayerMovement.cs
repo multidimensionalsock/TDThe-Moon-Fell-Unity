@@ -82,6 +82,5 @@ public class PlayerMovement : MonoBehaviour
 	{
 		m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
 	}
-
 	#endregion
 }
