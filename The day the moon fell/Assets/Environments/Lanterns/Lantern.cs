@@ -11,6 +11,12 @@ public class Lantern : MonoBehaviour
 	public void LanternOn()
 	{
 		Debug.Log("lit");
+		StartCoroutine(on());
+	}
+
+	IEnumerator on()
+	{
+		yield return new WaitForSeconds(0.2f);
 		gameObject.GetComponent<SpriteRenderer>().sprite = lit;
 	}
 }

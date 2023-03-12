@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 m_Movement;
 	private Coroutine m_moveCoroutine;
 	private bool m_Running;
+	private bool m_lighting;
 
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 		m_Input.currentActionMap.FindAction("Movement").canceled += MoveEnd;
 		m_Input.currentActionMap.FindAction("Run").performed += RunStart;
 		m_Input.currentActionMap.FindAction("Run").canceled += RunEnd;
+		m_Input.currentActionMap.FindAction("Lantern").performed += light;
+
 	}
 
 	#region movementHandling
@@ -59,6 +62,18 @@ public class PlayerMovement : MonoBehaviour
 	{
 		m_Running = false;
 	}
+	void light(InputAction.CallbackContext context)
+	{
+		//if colliding with lantern
+		StartCoroutine(EndLight());
+	}
+
+	IEnumerator EndLight()
+	{
+		m_lighting = true;
+		yield return new WaitForSeconds(0.2f);
+		m_lighting = false;
+	}
 
 
 	#endregion
@@ -74,6 +89,10 @@ public class PlayerMovement : MonoBehaviour
 	}
 	IEnumerator Move()
 	{
+		if (m_lighting == true)
+		{
+			yield break;
+		}
 		Debug.Log("moving");
 		while (m_Movement.x != 0)
 		{

@@ -76,7 +76,7 @@ public class PlayerAnimation : MonoBehaviour
 
 	IEnumerator EndLight()
 	{
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.2f);
 		m_Animator.SetInteger("State", 0);
 	}
 
