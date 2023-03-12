@@ -13,8 +13,12 @@ public class PlayerAnimation : MonoBehaviour
 	private PlayerInput m_Input;
 	private Vector2 m_direction; //true == right, false == left
 	private Animator m_Animator;
+	private bool m_Running;
+	private bool m_LanternCollision;
 	//state 0 = idle
 	//state 1 = walk
+	//state 2 = running
+	//state 3 = light 
 
 	// Start is called before the first frame update
 	void Awake()
@@ -23,6 +27,10 @@ public class PlayerAnimation : MonoBehaviour
 		m_Animator = GetComponent<Animator>();
 		m_Input.currentActionMap.FindAction("Movement").performed += MoveStart;
 		m_Input.currentActionMap.FindAction("Movement").canceled += MoveEnd;
+		m_Input.currentActionMap.FindAction("Run").performed+= RunStart;
+		m_Input.currentActionMap.FindAction("Run").canceled+= RunEnd;
+		m_Input.currentActionMap.FindAction("Lantern").performed += Light;
+		//e to run
 	}
 
 	void MoveStart(InputAction.CallbackContext context)
@@ -32,7 +40,10 @@ public class PlayerAnimation : MonoBehaviour
 		{
 			Flip();
 			m_direction = context.ReadValue<Vector2>();
-			m_Animator.SetInteger("State", 1);
+			if (m_Running != true)
+			{
+				m_Animator.SetInteger("State", 1);
+			}
 		}
 	}
 
@@ -41,6 +52,49 @@ public class PlayerAnimation : MonoBehaviour
 		m_Animator.SetInteger("State", 0);
 	}
 
+	void RunStart(InputAction.CallbackContext context)
+	{
+		m_Running= true;
+		m_Animator.SetInteger("State", 2);
+	}
+
+	void RunEnd(InputAction.CallbackContext context)
+	{
+		m_Running= false;
+		m_Animator.SetInteger("State", 0);
+	}
+
+	void Light(InputAction.CallbackContext context)
+	{
+		if (m_LanternCollision == true)
+		{
+			m_Animator.SetInteger("State", 3);
+		}
+		StartCoroutine(EndLight());
+
+	}
+
+	IEnumerator EndLight()
+	{
+		yield return new WaitForSeconds(0.5f);
+		m_Animator.SetInteger("State", 0);
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Lantern")
+		{
+			m_LanternCollision = true;
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Lantern")
+		{
+			m_LanternCollision = false;
+		}
+	}
 
 	// Update is called once per frame
 	void Flip()
@@ -49,11 +103,11 @@ public class PlayerAnimation : MonoBehaviour
 
 		if (m_direction.x > 0)
 		{
-			theScale.x = -1f;
+			theScale.x = -5f;
 		}
 		if (m_direction.x <= 0)
 		{
-			theScale.x = 1f;
+			theScale.x = 5f;
 		}
 
 		transform.localScale = theScale;

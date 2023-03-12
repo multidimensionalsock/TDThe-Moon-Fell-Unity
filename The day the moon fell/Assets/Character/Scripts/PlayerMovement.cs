@@ -13,11 +13,13 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D m_Rigidbody;
 	private Vector2 m_Movement;
 	private Coroutine m_moveCoroutine;
+	private bool m_Running;
 
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
 	[SerializeField] float m_maxVelocity;
 	[SerializeField] float m_jumpForce;
+	[SerializeField] float m_runSpeed;
 
 	void Awake()
 	{
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 		m_Input.currentActionMap.FindAction("Movement").performed += MoveStart;
 		m_Input.currentActionMap.FindAction("Jump").performed += Jump;
 		m_Input.currentActionMap.FindAction("Movement").canceled += MoveEnd;
+		m_Input.currentActionMap.FindAction("Run").performed += RunStart;
+		m_Input.currentActionMap.FindAction("Run").canceled += RunEnd;
 	}
 
 	#region movementHandling
@@ -47,6 +51,15 @@ public class PlayerMovement : MonoBehaviour
 		StopCoroutine(m_moveCoroutine);
 	}
 
+	void RunStart(InputAction.CallbackContext context)
+	{
+		m_Running = true;
+	}
+	void RunEnd(InputAction.CallbackContext context)
+	{
+		m_Running = false;
+	}
+
 
 	#endregion
 
@@ -64,7 +77,14 @@ public class PlayerMovement : MonoBehaviour
 		Debug.Log("moving");
 		while (m_Movement.x != 0)
 		{
-			m_Rigidbody.AddForce(m_Movement * m_movementSpeed, ForceMode2D.Impulse);
+			if (m_Running == true)
+			{
+				m_Rigidbody.AddForce(m_Movement * m_runSpeed, ForceMode2D.Impulse);
+			}
+			else
+			{
+				m_Rigidbody.AddForce(m_Movement * m_movementSpeed, ForceMode2D.Impulse);
+			}
 
 			if (m_Rigidbody.velocity.x > m_maxVelocity)
 			{
