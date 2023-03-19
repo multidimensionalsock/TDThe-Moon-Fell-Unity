@@ -12,7 +12,8 @@ public class Movingcloud : MonoBehaviour
 	private Vector2 movement;
     void Start()
     {
-		//turn off the points renderer 
+		point1.GetComponent<SpriteRenderer>().enabled= false;
+		point2.GetComponent<SpriteRenderer>().enabled= false;
 		Vector2 move =  point1.transform.position - gameObject.transform.position;
 		move.Normalize();
 		movement = move * speed;
@@ -36,17 +37,22 @@ public class Movingcloud : MonoBehaviour
 		Debug.Log("trigger enter");
 		if (collision.gameObject == point1)
 		{
-			Vector2 move = collision.transform.position - gameObject.transform.position;
+			Vector2 move = point2.transform.position - gameObject.transform.position;
 			move.Normalize();
 			movement = move * speed;
 			Debug.Log("switch to 2");
 		}
 		if (collision.gameObject == point2)
 		{
-			Vector2 move = collision.transform.position - gameObject.transform.position;
+			Vector2 move = point1.transform.position - gameObject.transform.position;
 			move.Normalize();
 			movement = move * speed;
 			Debug.Log("switch to 1");
 		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		Debug.Log("collidgn");
 	}
 }
