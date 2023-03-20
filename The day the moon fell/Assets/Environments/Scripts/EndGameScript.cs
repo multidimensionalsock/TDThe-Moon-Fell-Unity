@@ -8,6 +8,8 @@ public class EndGameScript : MonoBehaviour
     SpriteRenderer moonRenderer;
     [SerializeField] float FadeAmount;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject camera;
+    [SerializeField] float cameraRev;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +31,11 @@ public class EndGameScript : MonoBehaviour
             Debug.Log("moon fade");
             moonRenderer.enabled = true;
             moonRenderer.color = new Color(1f, 1f, 1f, moonRenderer.color.a + FadeAmount);
+            camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, camera.transform.position.z - cameraRev);
             yield return new WaitForFixedUpdate();
          }
         //move to next scene (end of story exposition and credits)
     }
 }
 
-//needs to check if all lanterns have been lit
-//if so then it can be called 
+//zoom the cmaera out 
