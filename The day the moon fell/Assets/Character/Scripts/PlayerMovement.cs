@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
 	[SerializeField] float m_maxVelocity;
-	[SerializeField] float m_jumpForce;
+	public float m_jumpForce;
 	[SerializeField] float m_runSpeed;
 
 	void Awake()
