@@ -21,6 +21,10 @@ public class PlayerCollisions : MonoBehaviour
 		if (currentLantern != null)
 		{
 			currentLantern.LanternOn();
+			if (currentLantern.GetComponent<EndGameScript>() != null)
+            {
+				currentLantern.GetComponent<EndGameScript>().StartEndLevel();
+            }
 		}
 	}
 
