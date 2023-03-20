@@ -93,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
 		{
 			yield break;
 		}
-		Debug.Log("moving");
 		while (m_Movement.x != 0)
 		{
 			if (m_Running == true)

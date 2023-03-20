@@ -17,7 +17,6 @@ public class PlayerCollisions : MonoBehaviour
 
 	private void LanternOn(InputAction.CallbackContext context)
 	{
-		Debug.Log("collision action called");
 		if (currentLantern != null)
 		{
 			currentLantern.LanternOn();
@@ -32,7 +31,6 @@ public class PlayerCollisions : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Lantern")
 		{
-			Debug.Log("lantern collision");
 			currentLantern = collision.gameObject.GetComponent<Lantern>();
 		}
 	}
@@ -57,7 +55,6 @@ public class PlayerCollisions : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Moving cloud")
 		{
-			Debug.Log("pass");
 			transform.parent = null;
 		}
 	}

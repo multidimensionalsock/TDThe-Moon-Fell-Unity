@@ -29,7 +29,6 @@ public class EndGameScript : MonoBehaviour
     {
         while (moonRenderer.color.a != 1) 
         {
-            Debug.Log("moon fade");
             moonRenderer.enabled = true;
             moonRenderer.color = new Color(1f, 1f, 1f, moonRenderer.color.a + FadeAmount);
             camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, camera.transform.position.z - cameraRev);
