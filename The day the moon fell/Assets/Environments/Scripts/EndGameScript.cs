@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 public class EndGameScript : MonoBehaviour
 {
     [SerializeField] GameObject moon;
@@ -21,7 +22,7 @@ public class EndGameScript : MonoBehaviour
         //check if theres enough lanterns lit in lantern lir event system
         //if there is then 
         StartCoroutine(moonFade());
-        player.GetComponent<PlayerMovement>().enabled = false; //this doesnt work
+        player.GetComponent<PlayerInput>().enabled = false; 
     }
 
     IEnumerator moonFade()
