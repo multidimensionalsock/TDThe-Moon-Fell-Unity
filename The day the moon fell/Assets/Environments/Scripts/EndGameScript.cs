@@ -21,7 +21,7 @@ public class EndGameScript : MonoBehaviour
         //check if theres enough lanterns lit in lantern lir event system
         //if there is then 
         StartCoroutine(moonFade());
-        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerMovement>().enabled = false; //this doesnt work
     }
 
     IEnumerator moonFade()
@@ -37,5 +37,3 @@ public class EndGameScript : MonoBehaviour
         //move to next scene (end of story exposition and credits)
     }
 }
-
-//zoom the cmaera out 
