@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 	private bool m_Running;
 	private bool m_lighting;
 	private bool m_grounded = true;
+	public int jumpno = 0;
 
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		m_Rigidbody.velocity = Vector2.zero;
 		m_grounded = true;
+		jumpno = 0;
 	}
 	IEnumerator Move()
 	{
@@ -121,7 +123,8 @@ public class PlayerMovement : MonoBehaviour
 
 	void Jump(InputAction.CallbackContext context)
 	{
-		if (m_grounded== true)
+		jumpno++;
+		if (m_grounded== true || jumpno < 3)
 		{
 			m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
 			StartCoroutine(CheckIfGrounded());
