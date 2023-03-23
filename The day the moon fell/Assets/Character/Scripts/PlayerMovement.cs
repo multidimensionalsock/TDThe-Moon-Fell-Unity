@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	private Coroutine m_moveCoroutine;
 	private bool m_Running;
 	private bool m_lighting;
+	private bool m_grounded = true;
 
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
@@ -83,9 +84,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		while (m_Rigidbody.velocity.y != 0)
 		{
+			m_grounded = false;
 			yield return new WaitForFixedUpdate();
 		}
 		m_Rigidbody.velocity = Vector2.zero;
+		m_grounded = true;
 	}
 	IEnumerator Move()
 	{
@@ -118,7 +121,12 @@ public class PlayerMovement : MonoBehaviour
 
 	void Jump(InputAction.CallbackContext context)
 	{
-		m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
+		if (m_grounded== true)
+		{
+			m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
+			StartCoroutine(CheckIfGrounded());
+		}
+		
 	}
 	#endregion
 }
