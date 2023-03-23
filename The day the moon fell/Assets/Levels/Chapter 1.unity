@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -17846,7 +17846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -18045,7 +18045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 80
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -18353,7 +18353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -18453,7 +18453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -19894,7 +19894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 70
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
@@ -20074,11 +20074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.62
+      value: -21.42
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.84
+      value: -2.41
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20130,7 +20130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968182, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_jumpForce
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968182, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_movementSpeed
@@ -20268,7 +20268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f09807520b0a648a0f79f9e6fa4130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LanternsInLevel: 8
+  LanternsInLevel: 7
 --- !u!1001 &2121423778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20513,7 +20513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929390, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_percentage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929393, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_Name
