@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GoToScene : MonoBehaviour
 {
-	[SerializeField] int sceneNo;
+	[SerializeField] string sceneName;
 	[SerializeField] GameObject LanternEvents;
     // Start is called before the first frame update
     
@@ -13,7 +13,7 @@ public class GoToScene : MonoBehaviour
 	{
 		if (LanternEvents.GetComponent<LanternEvents>().ProceedToNextLevel() == true)
 		{
-			SceneManager.LoadScene(sceneNo);
+			SceneManager.LoadScene(sceneName);
 		}
 		//else
 		//{
