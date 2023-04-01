@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D m_Rigidbody;
 	private Vector2 m_Movement;
 	private Coroutine m_moveCoroutine;
-	private bool m_Running;
 	private bool m_lighting;
 	private bool m_grounded = true;
 	public int jumpno = 0;
@@ -22,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] float m_movementSpeed;
 	[SerializeField] float m_maxVelocity;
 	public float m_jumpForce;
-	[SerializeField] float m_runSpeed;
+    [SerializeField] float m_runningAdd;
 
 	void Awake()
 	{
@@ -58,11 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
 	void RunStart(InputAction.CallbackContext context)
 	{
-		m_Running = true;
+		m_maxVelocity += m_runningAdd;
 	}
 	void RunEnd(InputAction.CallbackContext context)
 	{
-		m_Running = false;
+		m_maxVelocity -= m_runningAdd;
 	}
 	void light(InputAction.CallbackContext context)
 	{
@@ -100,14 +99,9 @@ public class PlayerMovement : MonoBehaviour
 		}
 		while (m_Movement.x != 0)
 		{
-			if (m_Running == true)
-			{
-				m_Rigidbody.AddForce(m_Movement * m_runSpeed, ForceMode2D.Impulse);
-			}
-			else
-			{
-				m_Rigidbody.AddForce(m_Movement * m_movementSpeed, ForceMode2D.Impulse);
-			}
+			
+			m_Rigidbody.AddForce(m_Movement * m_movementSpeed, ForceMode2D.Impulse);
+			
 
 			if (m_Rigidbody.velocity.x > m_maxVelocity)
 			{
