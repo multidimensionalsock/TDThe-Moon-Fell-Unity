@@ -23,6 +23,7 @@ public class PlayerAnimation : MonoBehaviour
 	// Start is called before the first frame update
 	void Awake()
 	{
+		m_direction = Vector2.right;
 		m_Input = GetComponent<PlayerInput>();
 		m_Animator = GetComponent<Animator>();
 		m_Input.currentActionMap.FindAction("Movement").performed += MoveStart;
