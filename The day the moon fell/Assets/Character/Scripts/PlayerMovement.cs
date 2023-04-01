@@ -102,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
 			
 			m_Rigidbody.AddForce(m_Movement * m_movementSpeed, ForceMode2D.Impulse);
 			
-
 			if (m_Rigidbody.velocity.x > m_maxVelocity)
 			{
 				m_Rigidbody.velocity = new Vector2(m_maxVelocity, m_Rigidbody.velocity.y);
