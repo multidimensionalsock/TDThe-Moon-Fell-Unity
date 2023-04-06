@@ -5208,6 +5208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large text UI
       objectReference: {fileID: 0}
+    - target: {fileID: 6068118983239482884, guid: e937cf74d0853cc4e8f09eb048d0e096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6068118983239483000, guid: e937cf74d0853cc4e8f09eb048d0e096, type: 3}
       propertyPath: m_Pivot.x
       value: 0
