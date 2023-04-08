@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 	private bool m_Running;
 	private bool m_lighting;
 	private bool m_grounded = true;
+	private bool m_floorCollision = false;
 	public int jumpno = 0;
 
 	[Header("Movement variables")]
@@ -35,6 +36,22 @@ public class PlayerMovement : MonoBehaviour
 		m_Input.currentActionMap.FindAction("Run").canceled += RunEnd;
 		m_Input.currentActionMap.FindAction("Lantern").performed += light;
 
+	}
+
+	private void Update()
+	{
+		if (m_Rigidbody.velocity.y == 0)
+		{
+			m_grounded = true;
+		}
+		else if (m_floorCollision == true)
+		{
+			m_grounded = true;
+		}
+		else
+		{
+			m_grounded = false;
+		}
 	}
 
 	#region movementHandling
@@ -134,10 +151,18 @@ public class PlayerMovement : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Moving Cloud")
+		if (collision.gameObject.tag == "Floor")
 		{
-			m_grounded = true;
-			jumpno = 0;
+			m_floorCollision = true;
+		}
+
+	}
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Floor")
+		{
+			m_floorCollision = false;
 		}
 	}
 	#endregion

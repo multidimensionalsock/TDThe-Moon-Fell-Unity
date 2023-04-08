@@ -108,6 +108,28 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "down",
+                    "id": "ccd47c9b-609e-43df-86b9-4a1ca71d7082",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "12e4d30a-e4e2-4d1c-b577-5fe941eaee7e",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "9727996d-2034-496c-b73e-b60595cabaed",
                     "path": "<Keyboard>/space",
