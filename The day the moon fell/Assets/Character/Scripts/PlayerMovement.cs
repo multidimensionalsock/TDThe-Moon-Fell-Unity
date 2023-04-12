@@ -136,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
 			}
 			yield return new WaitForFixedUpdate();
 		}
+		
 	}
 
 	void Jump(InputAction.CallbackContext context)
