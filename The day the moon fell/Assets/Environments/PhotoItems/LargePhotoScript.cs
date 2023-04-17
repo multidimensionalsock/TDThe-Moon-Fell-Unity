@@ -15,14 +15,9 @@ public class LargePhotoScript : MonoBehaviour
     {
         noLanterns = childObjects.Length + 1;
         phototracker = GameObject.Find("PhotoTracker");
-        if (phototracker != null)
-        {
-            Debug.Log("photo tracker found");
-        }
         if (phototracker.GetComponent<PhotoItemTracker>().GetIfTrue(photoNumber) == true)
         {
             Lantern.LanternLit += AddLantern;
-            Debug.Log("lantern added");
         }
         m_renderer = GetComponent<SpriteRenderer>();
         
@@ -32,7 +27,6 @@ public class LargePhotoScript : MonoBehaviour
     {
         lanternsLit++;
         Color newColor = new Color(1f, 1f, 1f, m_renderer.color.a + (1f/ noLanterns));
-        Debug.Log(newColor.a);
         m_renderer.color = newColor;
 
     }
