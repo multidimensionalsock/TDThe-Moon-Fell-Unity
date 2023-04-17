@@ -155,16 +155,20 @@ public class PlayerMovement : MonoBehaviour
 		List<GameObject> turn = m_floor;
 		for (int i = 0; i < turn.Count; i++)
 		{
-            m_floor[i].GetComponent<BoxCollider2D>().enabled = false;
+			m_floor[i].GetComponent<BoxCollider2D>().enabled = false;
 		}
 		m_floor.Clear();
-		Debug.Log(turn);
+		Debug.Log("point 1" + turn);
 		yield return new WaitForSeconds(0.1f);
-		for (int i = 0; i < turn.Count; i++)
+		Debug.Log(turn.Count);
+		for (int i = 0; i <= turn.Count; i++)
 		{
+			Debug.Log("enabling");
+			Debug.Log(m_floor[i].GetComponent<BoxCollider2D>().enabled);
 			m_floor[i].GetComponent<BoxCollider2D>().enabled = true;
+			
 		}
-		Debug.Log(turn);
+		Debug.Log("Point 2" + turn);
 	}
 
 	void Jump(InputAction.CallbackContext context)
