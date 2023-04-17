@@ -16,4 +16,13 @@ public class PhotoItemTracker : MonoBehaviour
 	{
 		itemsCollected[itemNo] = true;
 	}
+
+	public bool GetIfTrue(int objectNo)
+    {
+		if (itemsCollected[objectNo] == true)
+        {
+			return true;
+        }
+		return false;
+    }
 }

@@ -29,6 +29,7 @@ public class Lantern : MonoBehaviour
 		gameObject.GetComponent<SpriteRenderer>().sprite = lit;
 		LanternIsOn = true;
 		LanternLit?.Invoke();
+		GetComponent<CapsuleCollider2D>().enabled = false;
 		
 	}
 }
