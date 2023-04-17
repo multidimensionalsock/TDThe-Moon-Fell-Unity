@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 	private bool m_lighting;
 	private bool m_grounded = true;
 	private bool m_floorCollision = false;
+	private List<GameObject> m_floor;
 	public int jumpno = 0;
 
 	[Header("Movement variables")]
@@ -35,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 		m_Input.currentActionMap.FindAction("Run").performed += RunStart;
 		m_Input.currentActionMap.FindAction("Run").canceled += RunEnd;
 		m_Input.currentActionMap.FindAction("Lantern").performed += light;
+		m_Input.currentActionMap.FindAction("Drop").performed += Drop;
+		m_floor = new List<GameObject>();
 
 	}
 
@@ -52,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			m_grounded = false;
 		}
+		
 	}
 
 	#region movementHandling
@@ -59,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		m_Movement = context.ReadValue<Vector2>();
 		m_moveCoroutine = StartCoroutine(Move());
+		
 	}
 
 	void MoveEnd(InputAction.CallbackContext context)
@@ -71,6 +76,11 @@ public class PlayerMovement : MonoBehaviour
 			StartCoroutine(CheckIfGrounded());
 		}
 		StopCoroutine(m_moveCoroutine);
+	}
+
+	void Drop(InputAction.CallbackContext context)
+	{ 
+		StartCoroutine(FloorCollisionOff());
 	}
 
 	void RunStart(InputAction.CallbackContext context)
@@ -137,6 +147,24 @@ public class PlayerMovement : MonoBehaviour
 			yield return new WaitForFixedUpdate();
 		}
 		
+		
+	}
+
+	IEnumerator FloorCollisionOff()
+    {
+		List<GameObject> turn = m_floor;
+		for (int i = 0; i < turn.Count; i++)
+		{
+            m_floor[i].GetComponent<BoxCollider2D>().enabled = false;
+		}
+		m_floor.Clear();
+		Debug.Log(turn);
+		yield return new WaitForSeconds(0.1f);
+		for (int i = 0; i < turn.Count; i++)
+		{
+			m_floor[i].GetComponent<BoxCollider2D>().enabled = true;
+		}
+		Debug.Log(turn);
 	}
 
 	void Jump(InputAction.CallbackContext context)
@@ -152,9 +180,13 @@ public class PlayerMovement : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+		
 		if (collision.gameObject.tag == "Floor")
 		{
+			Debug.Log("colliding");
 			m_floorCollision = true;
+			Debug.Log(collision.gameObject);
+			m_floor.Add(collision.gameObject);
 		}
 
 	}
@@ -164,6 +196,7 @@ public class PlayerMovement : MonoBehaviour
 		if (collision.gameObject.tag == "Floor")
 		{
 			m_floorCollision = false;
+			m_floor.Remove(collision.gameObject);
 		}
 	}
 	#endregion

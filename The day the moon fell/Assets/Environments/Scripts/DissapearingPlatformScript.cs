@@ -9,12 +9,12 @@ public class DissapearingPlatformScript : MonoBehaviour
 	[SerializeField] float m_percentage;
 	[SerializeField] float reduction;
 	bool m_decreasing;
-	BoxCollider2D m_collider;
+	CapsuleCollider2D m_collider;
     // Start is called before the first frame update
     void Start()
     {
         m_renderer= GetComponent<SpriteRenderer>();
-		m_collider= GetComponent<BoxCollider2D>();
+		m_collider= GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
