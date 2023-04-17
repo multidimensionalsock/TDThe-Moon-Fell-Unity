@@ -19,11 +19,11 @@ public class LargePhotoScript : MonoBehaviour
         {
             Debug.Log("photo tracker found");
         }
-        ///if (phototracker.GetComponent<PhotoItemTracker>().GetIfTrue(photoNumber) == true)
-        //{
+        if (phototracker.GetComponent<PhotoItemTracker>().GetIfTrue(photoNumber) == true)
+        {
             Lantern.LanternLit += AddLantern;
             Debug.Log("lantern added");
-        //}
+        }
         m_renderer = GetComponent<SpriteRenderer>();
         
     }
