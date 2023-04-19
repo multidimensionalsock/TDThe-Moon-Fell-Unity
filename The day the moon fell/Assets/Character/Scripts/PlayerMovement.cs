@@ -79,8 +79,13 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	void Drop(InputAction.CallbackContext context)
-	{ 
-		StartCoroutine(FloorCollisionOff());
+	{
+		Debug.Log(m_floor);
+		for (int i = 0; i <= m_floor.Count; i++)
+		{
+			m_floor[i].GetComponent<ColliderController>().DisableCollider();
+		}
+		m_floor.Clear();
 	}
 
 	void RunStart(InputAction.CallbackContext context)
@@ -150,26 +155,7 @@ public class PlayerMovement : MonoBehaviour
 		
 	}
 
-	IEnumerator FloorCollisionOff()
-    {
-		List<GameObject> turn = m_floor;
-		for (int i = 0; i < turn.Count; i++)
-		{
-			m_floor[i].GetComponent<BoxCollider2D>().enabled = false;
-		}
-		m_floor.Clear();
-		Debug.Log("point 1" + turn);
-		yield return new WaitForSeconds(0.1f);
-		Debug.Log(turn.Count);
-		for (int i = 0; i <= turn.Count; i++)
-		{
-			Debug.Log("enabling");
-			Debug.Log(m_floor[i].GetComponent<BoxCollider2D>().enabled);
-			m_floor[i].GetComponent<BoxCollider2D>().enabled = true;
-			
-		}
-		Debug.Log("Point 2" + turn);
-	}
+	
 
 	void Jump(InputAction.CallbackContext context)
 	{
