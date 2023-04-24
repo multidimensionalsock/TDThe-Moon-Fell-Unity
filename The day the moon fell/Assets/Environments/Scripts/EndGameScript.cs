@@ -11,6 +11,8 @@ public class EndGameScript : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject camera;
     [SerializeField] float cameraRev;
+    [SerializeField] GameObject lanternEvents;
+    [SerializeField] GameObject largeText;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,19 +23,28 @@ public class EndGameScript : MonoBehaviour
     {
         //check if theres enough lanterns lit in lantern lir event system
         //if there is then 
-        StartCoroutine(moonFade());
-        player.GetComponent<PlayerInput>().enabled = false; 
+        if (lanternEvents.GetComponent<LanternEvents>().ProceedToNextLevel() == true)
+        {
+            StartCoroutine(moonFade());
+            player.GetComponent<PlayerInput>().enabled = false;
+            
+        }
+        //else
+        //{
+        //	//display message saying not all lantners have been lit
+        //}
     }
 
     IEnumerator moonFade()
     {
-        while (moonRenderer.color.a != 1) 
+        while (moonRenderer.color.a <= 1) 
         {
             moonRenderer.enabled = true;
             moonRenderer.color = new Color(1f, 1f, 1f, moonRenderer.color.a + FadeAmount);
             camera.transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y, camera.transform.position.z - cameraRev);
             yield return new WaitForFixedUpdate();
          }
-        //move to next scene (end of story exposition and credits)
+        //display text on scene 
     }
+
 }

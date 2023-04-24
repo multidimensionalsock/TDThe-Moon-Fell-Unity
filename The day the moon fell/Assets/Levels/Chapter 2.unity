@@ -461,7 +461,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4459423666318929389, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929389, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1485,10 +1485,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moon: {fileID: 1779278194}
-  FadeAmount: 0
+  FadeAmount: 0.0005
   player: {fileID: 1685153471}
   camera: {fileID: 1730225374}
-  cameraRev: 0
+  cameraRev: 0.1
+  lanternEvents: {fileID: 2109111134}
 --- !u!1001 &390933212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13317,7 +13318,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4459423666318929389, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929389, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14177,7 +14178,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4459423666318929389, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4459423666318929389, guid: 0105540496ebd8e4b8065adbd6db6392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19072,7 +19073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.2
+      value: 113.8
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19287,7 +19288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LanternsLit: 0
-  LanternsInLevel: 23
+  LanternsInLevel: 0
 --- !u!1001 &2109634803
 PrefabInstance:
   m_ObjectHideFlags: 0

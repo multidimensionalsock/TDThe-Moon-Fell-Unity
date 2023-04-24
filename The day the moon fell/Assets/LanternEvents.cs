@@ -18,7 +18,7 @@ public class LanternEvents : MonoBehaviour
 	void AddLantern()
 	{
 		LanternsLit++;
-
+		Debug.Log(LanternsLit >= LanternsInLevel);
 		if (LanternsLit >= LanternsInLevel)
 		{
 			AllLit = true;

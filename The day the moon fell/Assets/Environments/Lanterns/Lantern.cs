@@ -21,6 +21,7 @@ public class Lantern : MonoBehaviour
 		{
 			GetComponent<GoToScene>().ChangeScene();
 		}
+		
 	}
 
 	IEnumerator on()
@@ -30,6 +31,10 @@ public class Lantern : MonoBehaviour
 		LanternIsOn = true;
 		LanternLit?.Invoke();
 		GetComponent<CapsuleCollider2D>().enabled = false;
-		
+		if (gameObject.GetComponent<EndGameScript>() != null)
+		{
+			GetComponent<EndGameScript>().StartEndLevel();
+		}
+
 	}
 }
