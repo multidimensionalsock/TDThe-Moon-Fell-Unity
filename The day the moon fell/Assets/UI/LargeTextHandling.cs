@@ -41,7 +41,7 @@ public class LargeTextHandling : MonoBehaviour
 			{
 				SceneManager.LoadScene("Menu");
 			}
-			FirstCalled = true;
+			
 			StartCoroutine(fade());
 			player.GetComponent<PlayerMovement>().enabled = true;
 			text.enabled = false;
@@ -57,7 +57,8 @@ public class LargeTextHandling : MonoBehaviour
 			Background.color = new Color(1f, 1f, 1f, Background.color.a - 0.01f);
 			yield return new WaitForFixedUpdate();
 		}
-		
+
+		FirstCalled = true;
 		gameObject.transform.parent.gameObject.SetActive(false);
 	}
 }
