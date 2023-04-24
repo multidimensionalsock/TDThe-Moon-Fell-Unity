@@ -7,6 +7,7 @@ public class DissapearingPlatformScript : MonoBehaviour
 {
 	SpriteRenderer m_renderer;
 	[SerializeField] float m_percentage;
+	float m_currentPercentage;
 	[SerializeField] float reduction;
 	bool m_decreasing;
 	CapsuleCollider2D m_collider;
@@ -15,35 +16,38 @@ public class DissapearingPlatformScript : MonoBehaviour
     {
         m_renderer= GetComponent<SpriteRenderer>();
 		m_collider= GetComponent<CapsuleCollider2D>();
+		m_currentPercentage = m_percentage;
+		m_decreasing = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+		Debug.Log(m_currentPercentage);
 		if (m_decreasing)
 		{
-			m_percentage -= reduction;
-			if (m_percentage <= 0)
+			m_currentPercentage -= reduction;
+			if (m_currentPercentage <= 0)
 			{
 				m_decreasing = false;
 			}
 		}
 		else
 		{
-			m_percentage += reduction;
-			if (m_percentage >= 1f)
+			m_currentPercentage += reduction;
+			if (m_currentPercentage >= 1f)
 			{
 				m_decreasing = true;
 			}
 		}
-		Color newColour = new Color(1f, 1f, 1f, m_percentage);
+		Color newColour = new Color(1f, 1f, 1f, m_currentPercentage);
 		m_renderer.color = newColour;
 
-		if (m_percentage < 0.25 && m_collider.enabled)
+		if (m_currentPercentage < 0.25 && m_collider.enabled)
 		{
 			m_collider.enabled= false;
 		}
-		else if (m_percentage > 0.25 && !m_collider.enabled) 
+		else if (m_currentPercentage > 0.25 && !m_collider.enabled) 
 		{ 
 			m_collider.enabled= true;
 		}
