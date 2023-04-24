@@ -23,7 +23,6 @@ public class DissapearingPlatformScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-		Debug.Log(m_currentPercentage);
 		if (m_decreasing)
 		{
 			m_currentPercentage -= reduction;

@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	private bool m_floorCollision = false;
 	private List<GameObject> m_floor;
 	public int jumpno = 0;
+	Coroutine DontSlip = null;
 
 	[Header("Movement variables")]
 	[SerializeField] float m_movementSpeed;
@@ -189,5 +190,6 @@ public class PlayerMovement : MonoBehaviour
 			m_floor.Remove(collision.gameObject);
 		}
 	}
+
 	#endregion
 }
