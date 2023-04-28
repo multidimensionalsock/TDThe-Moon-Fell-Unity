@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Update()
 	{
-		if (m_Rigidbody.velocity.y == 0)
+		if (m_Rigidbody.velocity.y <= 0.1f)
 		{
 			m_grounded = true;
 		}
