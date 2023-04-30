@@ -17692,7 +17692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a62f51c3f68704aa7b37e4fbb975a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Chapter 2
   LanternEvents: {fileID: 2109111134}
 --- !u!4 &542165138 stripped
 Transform:
