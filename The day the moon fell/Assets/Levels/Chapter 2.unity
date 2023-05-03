@@ -1177,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -1446,6 +1450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -1595,6 +1603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 96523182377303617, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -10862,6 +10874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -11267,6 +11283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -11719,6 +11739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -11793,6 +11817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -12523,7 +12551,7 @@ Transform:
   - {fileID: 1950990559}
   - {fileID: 522296134}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &848341292
 PrefabInstance:
@@ -12581,6 +12609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -12861,7 +12893,7 @@ Transform:
   - {fileID: 1205903960}
   - {fileID: 2090877260}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922832396
 GameObject:
@@ -12951,6 +12983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -12964,69 +13000,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 96523182377303741, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
   m_PrefabInstance: {fileID: 923795932}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &946687462
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.2640293
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.556399
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.538343
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025194, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025196, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: m_Name
-      value: PhotoTracker
-      objectReference: {fileID: 0}
-    - target: {fileID: 5676836189262025197, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
-      propertyPath: itemsCollected.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 87381f36604aa894f8438c597b8a717b, type: 3}
 --- !u!1001 &948025594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13451,6 +13424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -14570,6 +14547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -14775,6 +14756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -14844,6 +14829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -14981,6 +14970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -15118,6 +15111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -15521,6 +15518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -16161,6 +16162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -16366,6 +16371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -16541,6 +16550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -16610,6 +16623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -17846,6 +17863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -17999,6 +18020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -18526,7 +18551,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1886120969
 PrefabInstance:
@@ -19481,7 +19506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LanternsLit: 0
-  LanternsInLevel: 0
+  LanternsInLevel: 23
 --- !u!1001 &2109634803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19538,6 +19563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}

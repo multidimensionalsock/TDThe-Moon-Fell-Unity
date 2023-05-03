@@ -5,7 +5,7 @@ using UnityEngine;
 public class LanternEvents : MonoBehaviour
 {
 	public int LanternsLit = 0;
-	[SerializeField] int LanternsInLevel = 0;
+	public int LanternsInLevel = 0;
 	bool AllLit = false;
 	public bool ProceedToNextLevel() { return AllLit; }
 

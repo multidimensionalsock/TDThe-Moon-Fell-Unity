@@ -540,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -947,6 +951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -17904,6 +17912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -18493,6 +18505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -18892,6 +18908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -18969,6 +18989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -19101,6 +19125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -19592,6 +19620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
@@ -21651,7 +21683,7 @@ GameObject:
   - component: {fileID: 2109111138}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: EventSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21699,7 +21731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LanternsLit: 0
-  LanternsInLevel: 7
+  LanternsInLevel: 8
 --- !u!1001 &2121423778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21887,6 +21919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lantern
       objectReference: {fileID: 0}
+    - target: {fileID: 2559807291714037519, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
+      propertyPath: m_lantnum
+      value: 
+      objectReference: {fileID: 2109111138}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c18a86d78b48d945bcca7a0d05faf92, type: 3}
