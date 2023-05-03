@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
 	private Coroutine m_moveCoroutine;
 	private bool m_Running;
 	private bool m_lighting;
-	private bool m_grounded = true;
-	private bool m_floorCollision = false;
 	private List<GameObject> m_floor;
 	public int jumpno = 0;
 	Coroutine DontSlip = null;
@@ -42,25 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
 	}
 
-	private void Update()
-	{
-		if (m_Rigidbody.velocity.y <= 0.1f)
-		{
-			m_grounded = true;
-		}
-		else if (m_floorCollision == true)
-		{
-			m_grounded = true;
-		}
-		else
-		{
-			m_grounded = false;
-		}
-		
-	}
-
-	#region movementHandling
-	void MoveStart(InputAction.CallbackContext context)
+    #region movementHandling
+    void MoveStart(InputAction.CallbackContext context)
 	{
 		m_Movement = context.ReadValue<Vector2>();
 		m_moveCoroutine = StartCoroutine(Move());
@@ -70,13 +51,9 @@ public class PlayerMovement : MonoBehaviour
 	void MoveEnd(InputAction.CallbackContext context)
 	{
 		m_Movement = Vector2.zero;
-		if (m_Rigidbody.velocity.y == 0)
+		if (Mathf.Abs(m_Rigidbody.velocity.y) > 0.05)
 			m_Rigidbody.velocity = new Vector2(0, m_Rigidbody.velocity.y);
-		else
-		{
-			StartCoroutine(CheckIfGrounded());
-		}
-		StopCoroutine(m_moveCoroutine);
+		
 	}
 
 	void Drop(InputAction.CallbackContext context)
@@ -114,17 +91,7 @@ public class PlayerMovement : MonoBehaviour
 	#endregion
 
 	#region movement 
-	IEnumerator CheckIfGrounded()
-	{
-		while (m_Rigidbody.velocity.y != 0)
-		{
-			m_grounded = false;
-			yield return new WaitForFixedUpdate();
-		}
-		m_Rigidbody.velocity = Vector2.zero;
-		m_grounded = true;
-		jumpno = 0;
-	}
+	
 	IEnumerator Move()
 	{
 		if (m_lighting == true)
@@ -160,13 +127,15 @@ public class PlayerMovement : MonoBehaviour
 
 	void Jump(InputAction.CallbackContext context)
 	{
-		jumpno++;
-		if (m_grounded== true || jumpno < 3)
+		if (Mathf.Abs(m_Rigidbody.velocity.y) < 0.05f)
 		{
-			m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
-			StartCoroutine(CheckIfGrounded());
+			jumpno = 0;
 		}
-		
+		if (jumpno < 2)
+		{
+			jumpno++;
+			m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
+		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -174,8 +143,6 @@ public class PlayerMovement : MonoBehaviour
 		
 		if (collision.gameObject.tag == "Floor")
 		{
-			Debug.Log("colliding");
-			m_floorCollision = true;
 			Debug.Log(collision.gameObject);
 			m_floor.Add(collision.gameObject);
 		}
@@ -186,7 +153,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "Floor")
 		{
-			m_floorCollision = false;
 			m_floor.Remove(collision.gameObject);
 		}
 	}
