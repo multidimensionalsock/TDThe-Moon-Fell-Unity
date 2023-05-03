@@ -1271,6 +1271,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1685153471}
     - target: {fileID: 6068118982705513961, guid: e937cf74d0853cc4e8f09eb048d0e096, type: 3}
+      propertyPath: goToEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068118982705513961, guid: e937cf74d0853cc4e8f09eb048d0e096, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 0c956db3573a9e64aa4d6c162b1ac09c, type: 2}
@@ -1381,6 +1385,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e937cf74d0853cc4e8f09eb048d0e096, type: 3}
+--- !u!1 &337095990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6068118983239482884, guid: e937cf74d0853cc4e8f09eb048d0e096, type: 3}
+  m_PrefabInstance: {fileID: 337095989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &345067884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1615,12 +1624,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moon: {fileID: 1779278194}
-  FadeAmount: 0.0005
+  FadeAmount: 0.002
   player: {fileID: 1685153471}
   camera: {fileID: 1730225374}
   cameraRev: 0.1
   lanternEvents: {fileID: 2109111134}
-  largeText: {fileID: 0}
+  largeText: {fileID: 337095990}
 --- !u!1001 &390933212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19257,7 +19266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17
+      value: 114.3
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.z
