@@ -45,15 +45,15 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Update()
 	{
-		if (m_Rigidbody.velocity.y <= 0.1f)
+		if (Mathf.Abs(m_Rigidbody.velocity.y) <= 0.1f)
 		{
 			m_grounded = true;
 		}
-		else if (m_floorCollision == true)
-		{
-			m_grounded = true;
-		}
-		else
+		//else if (m_floorCollision == true)
+		//{
+		//	m_grounded = true;
+		//}
+		else if (Mathf.Abs(m_Rigidbody.velocity.y) > 0.1f)
 		{
 			m_grounded = false;
 		}
@@ -73,10 +73,10 @@ public class PlayerMovement : MonoBehaviour
 		m_Movement = Vector2.zero;
 		if (m_Rigidbody.velocity.y == 0)
 			m_Rigidbody.velocity = new Vector2(0, m_Rigidbody.velocity.y);
-		else
-		{
-			StartCoroutine(CheckIfGrounded());
-		}
+		//else
+		//{
+		//	StartCoroutine(CheckIfGrounded());
+		//}
 		StopCoroutine(m_moveCoroutine);
 	}
 
@@ -115,17 +115,16 @@ public class PlayerMovement : MonoBehaviour
 	#endregion
 
 	#region movement 
-	IEnumerator CheckIfGrounded()
-	{
-		while (m_Rigidbody.velocity.y != 0)
-		{
-			m_grounded = false;
-			yield return new WaitForFixedUpdate();
-		}
-		m_Rigidbody.velocity = Vector2.zero;
-		m_grounded = true;
-		jumpno = 0;
-	}
+	//IEnumerator CheckIfGrounded()
+	//{
+	//	while (m_Rigidbody.velocity.y != 0)
+	//	{
+	//		m_grounded = false;
+	//		yield return new WaitForFixedUpdate();
+	//	}
+	//	m_Rigidbody.velocity = Vector2.zero;
+	//	m_grounded = true;
+	//}
 	IEnumerator Move()
 	{
 		if (m_lighting == true)
@@ -162,11 +161,15 @@ public class PlayerMovement : MonoBehaviour
 	void Jump(InputAction.CallbackContext context)
 	{
 		jumpno++;
-		if (m_grounded == true || jumpno < 3)
+		if (m_grounded == true)
+		{
+			jumpno = 0;
+		}
+		if (m_grounded == true || jumpno < 2)
 		{
 			m_Rigidbody.AddForce(new Vector2(0, m_jumpForce), ForceMode2D.Impulse);
 			GetComponentInChildren<AudioSource>().Play();
-			StartCoroutine(CheckIfGrounded());
+			//StartCoroutine(CheckIfGrounded());
 		}
 
 	}

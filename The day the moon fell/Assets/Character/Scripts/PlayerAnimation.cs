@@ -36,14 +36,15 @@ public class PlayerAnimation : MonoBehaviour
 	void MoveStart(InputAction.CallbackContext context)
 	{
 		//set walk to true
+		if (m_Running != true)
+		{
+			m_Animator.SetInteger("State", 1);
+		}
 		if (m_direction != context.ReadValue<Vector2>())
 		{
 			Flip();
 			m_direction = context.ReadValue<Vector2>();
-			if (m_Running != true)
-			{
-				m_Animator.SetInteger("State", 1);
-			}
+			
 		}
 	}
 
