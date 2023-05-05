@@ -21731,7 +21731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LanternsLit: 0
-  LanternsInLevel: 8
+  LanternsInLevel: 7
 --- !u!1001 &2121423778
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class Lantern : MonoBehaviour
 {
 	[SerializeField] private Sprite unlit;
 	[SerializeField] private Sprite lit;
-	private bool LanternIsOn = false;
+	public bool LanternIsOn = false;
 	[SerializeField] GameObject LanternUI;
 	PlayerInput m_input;
 
