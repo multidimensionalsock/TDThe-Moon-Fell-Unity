@@ -41,10 +41,11 @@ public class LargeTextHandling : MonoBehaviour
 			{
 				SceneManager.LoadScene("Menu");
 			}
-			
+
+			text.enabled = false;
 			StartCoroutine(fade());
 			player.GetComponent<PlayerMovement>().enabled = true;
-			text.enabled = false;
+			
 			
 		}
 		

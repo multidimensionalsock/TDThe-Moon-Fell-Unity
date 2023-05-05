@@ -18915,7 +18915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.5
+      value: 113.7
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19130,7 +19130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LanternsLit: 0
-  LanternsInLevel: 16
+  LanternsInLevel: -1
 --- !u!1001 &2109634803
 PrefabInstance:
   m_ObjectHideFlags: 0
