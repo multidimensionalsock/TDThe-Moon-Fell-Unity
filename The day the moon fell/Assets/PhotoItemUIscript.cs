@@ -8,6 +8,7 @@ public class PhotoItemUIscript : MonoBehaviour
 	// Start is called before the first frame update
 	PlayerInput m_input;
 	GameObject m_player;
+	bool wait = true;
     void Start()
     {
         m_input= GetComponent<PlayerInput>();
@@ -15,8 +16,16 @@ public class PhotoItemUIscript : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.anyKeyDown)
-			End();
+		if (wait == false)
+		{
+			if (Input.anyKeyDown)
+				End();
+		}
+	}
+
+	private void OnEnable()
+	{
+		StartCoroutine(waitasecond());
 	}
 
 	// Update is called once per frame
@@ -28,12 +37,20 @@ public class PhotoItemUIscript : MonoBehaviour
 		//	yield return new WaitForFixedUpdate();
 		//}
 		m_player.GetComponent<PlayerMovement>().enabled = true;
+		
 		Destroy(gameObject.transform.parent.gameObject);
+		
     }
 
 	public void setplayer(GameObject player)
 	{
 		m_player= player;
 		
+	}
+
+	IEnumerator waitasecond()
+	{
+		yield return new WaitForSeconds(2.0f);
+		wait = false;
 	}
 }
