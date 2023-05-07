@@ -15,6 +15,6 @@ public class LanternUIscript : MonoBehaviour
     private void OnEnable()
     {
         int numleft = m_lantnum.LanternsInLevel - m_lantnum.LanternsLit;
-        GetComponent<TextMeshProUGUI>().text = "There is " + numleft + "Lanterns left";
+        GetComponent<TextMeshProUGUI>().text = "There is " + numleft + " Lanterns left";
     }
 }
