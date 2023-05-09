@@ -803,15 +803,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6185053505118747526, guid: 49387b11400c96941b1d97cdd8122787, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.29877332
+      value: 0.36229253
       objectReference: {fileID: 0}
     - target: {fileID: 6185053505118747526, guid: 49387b11400c96941b1d97cdd8122787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2781944
+      value: 3.149
       objectReference: {fileID: 0}
     - target: {fileID: 6185053505118747526, guid: 49387b11400c96941b1d97cdd8122787, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.607597
+      value: 45.771
       objectReference: {fileID: 0}
     - target: {fileID: 6185053505118747526, guid: 49387b11400c96941b1d97cdd8122787, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17259,7 +17259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6185053505118747526, guid: 49387b11400c96941b1d97cdd8122787, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2987733
+      value: 0.3331621
       objectReference: {fileID: 0}
     - target: {fileID: 6185053505118747526, guid: 49387b11400c96941b1d97cdd8122787, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22974,7 +22974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToFollow: {fileID: 1685153471}
-  yoffset: 0
+  yoffset: 3
   xoffset: 0
 --- !u!114 &1730225379
 MonoBehaviour:
@@ -24003,7 +24003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -6.8
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968171, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24043,7 +24043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968172, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_GravityScale
-      value: 1.2
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 5006614261022968173, guid: 98013caa40200a14795a5bbfe081e914, type: 3}
       propertyPath: m_SortingOrder
